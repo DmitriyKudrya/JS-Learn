@@ -1,0 +1,7 @@
+   // at=y.indexOf("@");
+   // dot=y.indexOf(".");
+ 
+   // if (at<1 || dot <1){
+   //    alert("Email введен не верно");
+   //    return false;
+   // }
