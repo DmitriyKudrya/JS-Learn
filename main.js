@@ -32,7 +32,7 @@ function ajaxSend() {
 
   xhr.onreadystatechange = function() {
     if(xhr.readyState == 4 && xhr.status == 201) { 
-        document.querySelector("#result").innerHTML = xhr.responseText;
+        document.getElementById("n1").innerHTML = xhr.responseText;
       }
     } 
   }

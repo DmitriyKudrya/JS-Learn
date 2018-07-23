@@ -5,15 +5,27 @@
 	outline: 0;
 }
 
-table {
-	border-collapse: collapse; 
-	border: 3px solid grey; 
+table{
+	width: 100%;
+	border: 1px solid gray;
+	padding: 10px;
+	margin-top: 25px;
 }
 
-th {
-	border: 1px solid grey;
+th{
+	border: 1px solid gray;
+	height: 30px;
 }
 
-td {
-	border: 1px solid grey;
+td{
+	border: 1px solid gray;
+	height: 30px;
+}
+
+.capt{
+	background-color: #CD853F;
+}
+
+.raw{
+	background-color: #FFFFE0;
 }
