@@ -16,6 +16,8 @@ window.onload = function() {
     } 
     ajaxSend();
     alert ("Данные успешно отправлены");
+
+    document.getElementById("myForm").reset();
   }
 }
 
@@ -32,13 +34,37 @@ function ajaxSend() {
 
   xhr.onreadystatechange = function() {
     if(xhr.readyState == 4 && xhr.status == 201) { 
-        document.getElementById("n1").innerHTML = xhr.responseText;
-      }
-    } 
-  }
+        
+      var resJson = JSON.parse(xhr.responseText);
 
+      var n1 = resJson.name;
+      var j1 = resJson.job;
+      var id1 = resJson.id;
+      var cr1 = resJson.createdAt;
 
+      localStorage.setItem("n2", n1);
+      localStorage.setItem("j2", j1);
+      localStorage.setItem("id2", id1);
+      localStorage.setItem("cr2", cr1);
 
+      window.location = "Table.html";
+    }
+  } 
+}
 
+function createData() {
 
+  var n3 = localStorage.getItem("n2");
+  var j3 = localStorage.getItem("j2");
+  var id3 = localStorage.getItem("id2");
+  var cr3 = localStorage.getItem("cr2");
+
+  document.getElementById("n1").innerHTML = n3.value;
+  document.getElementById("j1").innerHTML = j3.value;
+  document.getElementById("id1").innerHTML = id3.value;
+  document.getElementById("cr1").innerHTML = cr3.value;
+
+  localStorage.clear();
+
+}
 
